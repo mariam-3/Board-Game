@@ -63,7 +63,7 @@ players = []
 for i in range(player_count): 
   # the player number goes up each time
   player_number = i + 1
-  # aks for the players' names
+  # ask for the players' names
   player_name = input(f'What is the name of player {player_number}? ')
   # adds the information gathered above to a new object
   player = Player(player_name, player_number) 
@@ -99,8 +99,7 @@ while game_running:
     # if they want to roll the die...
     elif turn == 'r': 
       # pick a random number between 1 and the number of faces on the die. 
-      roll = random.randint(1, dice) 
-      roll = int(roll)
+      roll = random.randint(1, dice)
       # tells the player what they rolled
       print (f'you rolled a(n) {roll}') 
       # adds the new number to their total
@@ -120,6 +119,7 @@ while game_running:
           Good luck next time!''') 
           # removes the player from the list
           players.remove(player)
+          print(player, "has been eliminated")
 
       # if the player's position is equal to any of the random numbers generated above...
       elif (player.position == random_square_1 or 
